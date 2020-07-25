@@ -13,7 +13,7 @@ const checkAir = (samples, threshold) => {
       tolerance += 1;
     }
   }
-  if((tolerance / samples.length) > threshold){
+  if((tolerance / samples.length) >= threshold){
     return 'Polluted'
   }
   else {
@@ -28,7 +28,7 @@ console.log(checkAir(
 ));
 
 console.log(checkAir(
-  ['dirty', 'clean', 'clean', 'clean', 'clean','dirty', 'clean', 'clean', 'clean'],
+  ['dirty', 'dirty', 'clean', 'clean', 'clean'],
   0.25
 ));
 
