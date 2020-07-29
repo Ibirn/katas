@@ -8,8 +8,8 @@ const stringSplit = (input, cut) => {
 
 const squareCode = (message) => {
   message = message.split(' ').join('')
-  let longth = Math.ceil(Math.sqrt(message.length))
-  let codeSeg = stringSplit(message, longth);
+  let segLength = Math.ceil(Math.sqrt(message.length))
+  let codeSeg = stringSplit(message, segLength);
   let output = [];
   for (let k = 0; k <= codeSeg.length; k++){
     output[k] = '';
@@ -25,5 +25,5 @@ const squareCode = (message) => {
 
 console.log(squareCode("chill out"));
 console.log(squareCode("feed the dog"));
-console.log(squareCode("have a nice day"));
+console.log(squareCode("with great power comes great responsibility"));
 console.log(squareCode("if man was meant to stay on the ground god would have given us roots"));
