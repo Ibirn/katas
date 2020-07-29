@@ -9,25 +9,20 @@ const chooseRecipe = (bakeryA, bakeryB, recipes) => {
   recName = '';
 
   for(let i = 0; i < recipes.length; i++){
-    ingOne = recipes[i].ingredients[0]
-    ingTwo = recipes[i].ingredients[1]
-    recName = recipes[i].name
-    
+    ingOne = recipes[i].ingredients[0];
+    ingTwo = recipes[i].ingredients[1];
+    recName = recipes[i].name;
 
     for(let j = 0; j < bakeryA.length; j++){
       if(bakeryA[j] === ingOne){
-        //console.log(ingOne)
         for(let k = 0; k < bakeryB.length; k++){
           if(bakeryB[k] === ingTwo){
-            //console.log(ingTwo)
           }
           else{
-            //console.log('nope')
           }
         }
       }
       else if(bakeryA[j] === ingTwo){
-        //console.log('ingtwo:' + ingTwo)
         for(let l = 0; l < bakeryB.length; l++){
           if(bakeryB[l] === ingOne){
           }
@@ -40,8 +35,8 @@ const chooseRecipe = (bakeryA, bakeryB, recipes) => {
 
 
 
-let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut', 'custard'];
-let bakeryB = ['milk', 'butter', 'cream cheese'];
+let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut','soylent','people'];
+let bakeryB = ['milk', 'butter', 'cream cheese', ];
 let recipes = [
     {
         name: 'Coconut Sponge Cake',
@@ -54,13 +49,17 @@ let recipes = [
     {
         name: 'Custard Surprise',
         ingredients: ['custard', 'ground beef']
+    },
+    {
+        name: 'Soylent Green',
+        ingredients: ['people', 'soylent']
     }
 ];
 
 console.log(chooseRecipe(bakeryA, bakeryB, recipes));
 
 bakeryA = ['potatoes', 'bay leaf', 'raisins'];
-bakeryB = ['red bean', 'dijon mustard', 'apples'];
+bakeryB = ['red bean', 'dijn mustard', 'apples','anchovies', 'honey'];
 recipes = [
     {
         name: 'Potato Ganache',
